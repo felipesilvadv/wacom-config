@@ -13,9 +13,9 @@ class AppWidget(QMainWindow):
         self.check_devices.setProgram('xsetwacom')
         self.check_devices.setArguments(['--list', 'devices'])
         self.check_devices.start()
-        #self.check_devices.readyReadStandardOutput.connect(self.getOuput)
         self.check_devices.finished.connect(self.check_wacom)
         self.tablet = HuionTablet()
+        self.tablet.msg.connect(self.statusBar().showMessage)
         self.setCentralWidget(self.tablet)
         self.centralWidget().setDisabled(True)
         self.show()
@@ -27,6 +27,10 @@ class AppWidget(QMainWindow):
             self.centralWidget().setEnabled(True)
         else:
             self.statusBar().showMessage('No se encontró una tableta Wacom')
+
+    def closeEvent(self, event):
+        return self.tablet.closeEvent(event)
+        
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)

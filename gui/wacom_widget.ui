@@ -27,28 +27,28 @@
    <item>
     <layout class="QGridLayout" name="gridLayout">
      <item row="1" column="0">
-      <widget class="QKeySequenceEdit" name="keyButton8">
+      <widget class="QKeySequenceEdit" name="keyButton3">
        <property name="keySequence">
         <string>3</string>
        </property>
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QKeySequenceEdit" name="keyButton3">
+      <widget class="QKeySequenceEdit" name="keyButton8">
        <property name="keySequence">
         <string>4</string>
        </property>
       </widget>
      </item>
      <item row="0" column="0">
-      <widget class="QKeySequenceEdit" name="keyButton2">
+      <widget class="QKeySequenceEdit" name="keyButton1">
        <property name="keySequence">
         <string>1</string>
        </property>
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QKeySequenceEdit" name="keyButton1">
+      <widget class="QKeySequenceEdit" name="keyButton2">
        <property name="keySequence">
         <string>2</string>
        </property>
