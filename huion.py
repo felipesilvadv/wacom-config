@@ -7,8 +7,9 @@ class HuionTablet(QWidget):
 
     msg = QtCore.pyqtSignal(str)
 
-    def __init__(self):
+    def __init__(self, parent):
         super().__init__()
+        self.parent = parent
         loadUi('gui/wacom_widget.ui', self)
         # Agregar los procesos de cada boton
         # Quizás sea bueno dar la versatilidad de crear procesos 
@@ -43,6 +44,8 @@ class HuionTablet(QWidget):
     
     def setUpKey(self):
         self.processCount += 1
+        if self.processCount == len(self.processes):
+            self.parent.close()
 
     def sendError(self):
         process = self.sender()
