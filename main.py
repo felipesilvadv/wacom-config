@@ -14,11 +14,16 @@ class AppWidget(QMainWindow):
         self.check_devices.setArguments(['--list', 'devices'])
         self.check_devices.start()
         self.check_devices.finished.connect(self.check_wacom)
-        self.tablet = HuionTablet(self)
+        self.tablet = HuionTablet(self.tabWidget)
+        self.stylus = HuionTablet(self.tabWidget)
         self.tablet.msg.connect(self.statusBar().showMessage)
-        self.setCentralWidget(self.tablet)
-        self.centralWidget().setDisabled(True)
+        self.tablet.finish.connect(self.close)
+        self.tabWidget.addTab(self.tablet, 'Tablet')
+        self.tabWidget.addTab(self.stylus, 'Stylus')
         self.show()
+        #self.setCentralWidget(self.tablet)
+        #self.centralWidget().setDisabled(True)
+        #self.show()
 
     
     def check_wacom(self):

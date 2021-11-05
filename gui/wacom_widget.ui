@@ -26,10 +26,13 @@
    </item>
    <item>
     <layout class="QGridLayout" name="gridLayout">
-     <item row="1" column="0">
-      <widget class="QKeySequenceEdit" name="keyButton3">
+     <item row="0" column="0">
+      <widget class="QKeySequenceEdit" name="keyButton1">
+       <property name="contextMenuPolicy">
+        <enum>Qt::NoContextMenu</enum>
+       </property>
        <property name="keySequence">
-        <string>3</string>
+        <string>1</string>
        </property>
       </widget>
      </item>
@@ -40,14 +43,14 @@
        </property>
       </widget>
      </item>
-     <item row="0" column="0">
-      <widget class="QKeySequenceEdit" name="keyButton1">
+     <item row="0" column="1">
+      <widget class="QKeySequenceEdit" name="keyButton3">
        <property name="keySequence">
-        <string>1</string>
+        <string>3</string>
        </property>
       </widget>
      </item>
-     <item row="0" column="1">
+     <item row="1" column="0">
       <widget class="QKeySequenceEdit" name="keyButton2">
        <property name="keySequence">
         <string>2</string>
@@ -60,6 +63,12 @@
     <widget class="QPushButton" name="pushButton">
      <property name="text">
       <string>Setear</string>
+     </property>
+     <property name="autoDefault">
+      <bool>true</bool>
+     </property>
+     <property name="default">
+      <bool>true</bool>
      </property>
     </widget>
    </item>
