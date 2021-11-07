@@ -1,7 +1,7 @@
 from PyQt5.QtWidgets import  QApplication, QMainWindow
 from PyQt5.QtCore import QProcess
 from PyQt5.uic import loadUi
-from huion import HuionTablet
+from huion import HuionTablet, Stylus
 import sys
 
 class AppWidget(QMainWindow):
@@ -15,7 +15,7 @@ class AppWidget(QMainWindow):
         self.check_devices.start()
         self.check_devices.finished.connect(self.check_wacom)
         self.tablet = HuionTablet(self.tabWidget)
-        self.stylus = HuionTablet(self.tabWidget)
+        self.stylus = Stylus(self.tabWidget)
         self.tablet.msg.connect(self.statusBar().showMessage)
         self.tablet.finish.connect(self.close)
         self.tabWidget.addTab(self.tablet, 'Tablet')

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>296</width>
-    <height>195</height>
+    <width>278</width>
+    <height>205</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,9 +15,12 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QLabel" name="label">
+    <widget class="QLabel" name="label_2">
      <property name="text">
-      <string>HUION H430P</string>
+      <string>**HUION Tablet H430P**</string>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::MarkdownText</enum>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -26,6 +29,30 @@
    </item>
    <item>
     <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="3">
+      <widget class="QKeySequenceEdit" name="keyButton3">
+       <property name="keySequence">
+        <string>3</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="label">
+       <property name="pixmap">
+        <pixmap>icons8-wacom-tablet-48.png</pixmap>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3">
+      <widget class="QKeySequenceEdit" name="keyButton8">
+       <property name="keySequence">
+        <string>4</string>
+       </property>
+      </widget>
+     </item>
      <item row="0" column="0">
       <widget class="QKeySequenceEdit" name="keyButton1">
        <property name="contextMenuPolicy">
@@ -36,21 +63,7 @@
        </property>
       </widget>
      </item>
-     <item row="1" column="1">
-      <widget class="QKeySequenceEdit" name="keyButton8">
-       <property name="keySequence">
-        <string>4</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QKeySequenceEdit" name="keyButton3">
-       <property name="keySequence">
-        <string>3</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0">
+     <item row="2" column="0">
       <widget class="QKeySequenceEdit" name="keyButton2">
        <property name="keySequence">
         <string>2</string>

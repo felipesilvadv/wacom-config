@@ -1,5 +1,5 @@
 from PyQt5 import QtCore
-from PyQt5.QtWidgets import QWidget, QKeySequenceEdit
+from PyQt5.QtWidgets import QWidget, QKeySequenceEdit, QGraphicsScene
 from PyQt5.QtCore import QProcess
 from PyQt5.uic import loadUi
 
@@ -71,3 +71,10 @@ class HuionTablet(QWidget):
             return event.ignore()
         else:
             return event.accept()
+
+
+class Stylus(QWidget):
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        loadUi('gui/stylus.ui', self)
